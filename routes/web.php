@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/GrupoAlmasen', function () {
+//     return view('GrupoAlmasen');
+// });
+
+Route::get('/GrupoAlmasen', 'GrupoAlmasen@index');
+Route::post('/GrupoAlmasen', 'GrupoAlmasen@IngresarGrupoAlamasen')->name('GrupoAlmasenForm');
+
+Route::get('/ConfigMoneda', 'ConfigMonedaController@index');
+
+// Route::get('/ConfigMoneda', function () {
+//     return view('ConfigMoneda');
+// });

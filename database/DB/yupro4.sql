@@ -7,7 +7,8 @@ create table IVE_Almacen
     cod_almacen  varchar(10) not null primary key,
     desc_almacen varchar(50) null,
     cod_sucursal varchar(2)  null,
-    enviado      char        not null
+    enviado      char        not null,
+    cod_grupo_almacen          varchar(100) null
 );
 
 create table GNL_config_moneda
