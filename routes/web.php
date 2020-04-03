@@ -25,6 +25,7 @@ Route::get('/GrupoAlmasen', 'GrupoAlmasen@index');
 Route::post('/GrupoAlmasen', 'GrupoAlmasen@IngresarGrupoAlamasen')->name('GrupoAlmasenForm');
 
 Route::get('/ConfigMoneda', 'ConfigMonedaController@index');
+Route::get('/eliminarAlmacen/{cod_grupo_almacen}', 'GrupoAlmasen@eliminarAlmacen');
 
 // Route::get('/ConfigMoneda', function () {
 //     return view('ConfigMoneda');

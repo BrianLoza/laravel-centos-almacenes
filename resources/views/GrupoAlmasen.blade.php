@@ -181,8 +181,8 @@
                       <td><span class="tag tag-success">{{ $Grupo_Almacen->cod_sucursal }}</span></td>
                       <td>{{ $Grupo_Almacen->desc_grupo_almacen }}</td>
                       <td>
-                          <button type="submit" class="btn btn-danger small">Eliminar</button>
-                          <button type="submit" class="btn btn-info small">Actualizar</button>
+                          <a href="{{ url('eliminarAlmacen/' . $Grupo_Almacen->cod_grupo_almacen) }}" type="button" class="btn btn-danger small">Eliminar</a>
+                          <a type="button" class="btn btn-info small">Actualizar</a>
                       </td>
                     </tr>
 
