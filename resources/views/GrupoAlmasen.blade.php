@@ -45,92 +45,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview menu-close">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Layout Options
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Navbar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Footer</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -252,9 +167,10 @@
                       <th>Cuneta Diferncia</th>
                       <th>Sucursal</th>
                       <th>Descripcion</th>
+                      <th>Acciones</th>
                     </tr>
                   </thead>
-                  <tbody>						
+                  <tbody>
 									@foreach($Grupo_Almacen as $Grupo_Almacen)
                     <tr>
                       <td>{{ $Grupo_Almacen->cod_grupo_almacen }}</td>
@@ -264,7 +180,13 @@
                       <td>{{ $Grupo_Almacen->cuenta_diferencia_articulo }}</td>
                       <td><span class="tag tag-success">{{ $Grupo_Almacen->cod_sucursal }}</span></td>
                       <td>{{ $Grupo_Almacen->desc_grupo_almacen }}</td>
-										</tr>
+                      <td>
+                          <button type="submit" class="btn btn-danger small">Eliminar</button>
+                          <button type="submit" class="btn btn-info small">Actualizar</button>
+                      </td>
+                    </tr>
+
+
 									@endforeach
                   </tbody>
                 </table>
@@ -275,7 +197,7 @@
           </div>
         </div>
         <!-- /.row -->
-				
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
