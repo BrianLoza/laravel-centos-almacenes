@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Autentificacion@index');
+Route::post('/', 'Autentificacion@auth')->name('autentificacion');
 
 // Route::get('/GrupoAlmasen', function () {
 //     return view('GrupoAlmasen');

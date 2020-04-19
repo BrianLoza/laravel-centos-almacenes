@@ -40,7 +40,7 @@ class GrupoAlmasen extends Controller
     }
 
     public function eliminarAlmacen($cod_grupo_almacen, Request $request) {
-        DB::select('DELETE FROM IVE_Grupo_Almacen WHERE cod_grupo_almacen');
+        DB::select('DELETE FROM IVE_Grupo_Almacen WHERE cod_grupo_almacen=:cod_grupo_almacen', array($cod_grupo_almacen));
         return redirect('/GrupoAlmasen');
     }
 

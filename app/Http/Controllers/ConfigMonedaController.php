@@ -18,7 +18,7 @@ class ConfigMonedaController extends Controller
     }
 }
 
-				
+
 // @foreach($Grupo_Almacen as $Grupo_Almacen)
 // <tr>
 //   <td>{{ $Grupo_Almacen->cod_grupo_almacen }}</td>

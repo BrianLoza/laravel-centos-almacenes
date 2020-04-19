@@ -84,3 +84,9 @@ create table IVE_transacciones_articulo
     foreign key (cod_unidad) references IVE_unidad (cod_unidad),
     foreign key (cod_moneda) references GNL_config_moneda (cod_moneda)
 );
+
+CREATE TABLE Usuario (
+    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(50),
+    contrasenia VARCHAR(50)
+);
